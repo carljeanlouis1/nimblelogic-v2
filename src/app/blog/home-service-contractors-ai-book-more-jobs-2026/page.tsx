@@ -18,6 +18,7 @@ export const metadata: Metadata = post
         locale: "en_US",
         type: "article",
         publishedTime: post.datePublished,
+        images: [{ url: `https://nimblelogicai.com${post.image}` }],
       },
     }
   : {};

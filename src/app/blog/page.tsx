@@ -41,6 +41,11 @@ export default function BlogPage() {
               className="group bg-[#111827]/60 backdrop-blur border border-white/5 rounded-2xl p-6 transition-all duration-300 hover:border-white/10 hover:-translate-y-0.5"
             >
               <div className="flex flex-col h-full">
+                <img
+                  src={post.image}
+                  alt={post.imageAlt}
+                  className="w-full aspect-video object-cover rounded-xl mb-4"
+                />
                 <span className="text-sm text-[#6B7280] mb-3">
                   {post.readTime}
                 </span>

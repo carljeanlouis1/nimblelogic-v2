@@ -27,6 +27,13 @@ export function BlogPostLayout({ post }: { post: BlogPost }) {
           Back to Blog
         </Link>
 
+        {/* Banner Image */}
+        <img
+          src={post.image}
+          alt={post.imageAlt}
+          className="w-full aspect-video object-cover rounded-2xl mb-8"
+        />
+
         {/* Title */}
         <h1 className="text-3xl md:text-4xl font-bold text-[#F9FAFB] leading-tight mb-4">
           {post.title}
@@ -55,6 +62,15 @@ export function BlogPostLayout({ post }: { post: BlogPost }) {
           <p className="text-lg text-[#9CA3AF] mb-6">
             Ready to stop missing calls and start capturing every lead?
           </p>
+          <p className="text-lg text-[#9CA3AF] mb-4">
+            Try our AI live:{" "}
+            <a
+              href="tel:8566663692"
+              className="text-[#00D4AA] font-semibold hover:underline"
+            >
+              (856) 666-3692
+            </a>
+          </p>
           <a
             href={bookingUrl}
             target="_blank"
@@ -63,6 +79,12 @@ export function BlogPostLayout({ post }: { post: BlogPost }) {
           >
             Book a Discovery Call
           </a>
+          <div className="mt-8 pt-8 border-t border-white/5">
+            <p className="text-sm text-[#6B7280] italic">
+              Written by NimbleLogic AI — we help small businesses capture every
+              call with custom AI phone agents. Based in NYC.
+            </p>
+          </div>
         </div>
       </article>
 
@@ -75,6 +97,7 @@ export function BlogPostLayout({ post }: { post: BlogPost }) {
             "@type": "BlogPosting",
             headline: post.title,
             description: post.metaDescription,
+            image: `https://nimblelogicai.com${post.image}`,
             datePublished: post.datePublished,
             dateModified: post.datePublished,
             author: {
