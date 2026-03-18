@@ -40,7 +40,7 @@ export function Services() {
       {/* AI Voice Agent — Hero Card */}
       <RevealOnScroll>
         <div className="animated-border">
-          <div className="bg-surface rounded-2xl p-8 md:p-12">
+          <div className="bg-surface rounded-2xl p-8 md:p-12 relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Left Column */}
               <div>

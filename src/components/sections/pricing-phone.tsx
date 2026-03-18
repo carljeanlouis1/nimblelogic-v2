@@ -18,7 +18,7 @@ function PricingCard({
   const isPopular = tier.popular;
 
   const cardContent = (
-    <div className={cn(isPopular && "bg-surface rounded-2xl p-8")}>
+    <div className={cn(isPopular && "bg-surface rounded-2xl p-8 relative z-10")}>
       {/* Popular badge */}
       {isPopular && (
         <div className="mb-4">
