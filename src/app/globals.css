@@ -91,13 +91,13 @@
 .animated-border {
   position: relative;
   border-radius: 1rem;
-  overflow: hidden;
 }
 
 .animated-border::before {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 0;
   border-radius: inherit;
   padding: 1.5px;
   pointer-events: none;
