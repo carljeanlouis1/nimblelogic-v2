@@ -27,7 +27,7 @@ export function PricingAssistant() {
 
           return (
             <RevealOnScroll key={tier.name} delay={i * 0.1}>
-              <GlassCard hover>
+              <GlassCard hover className="h-full flex flex-col">
                 {/* Name */}
                 <h3 className="text-lg font-semibold text-text-primary">
                   {tier.name}
@@ -50,7 +50,7 @@ export function PricingAssistant() {
                 <div className="h-px bg-white/5 my-6" />
 
                 {/* Features */}
-                <ul className="space-y-3">
+                <ul className="space-y-3 flex-1">
                   {tier.features.map((feature) => (
                     <li key={feature} className="flex items-center gap-3">
                       <Check className="w-4 h-4 shrink-0 text-text-muted" />
