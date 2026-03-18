@@ -103,7 +103,7 @@ export function PricingPhone() {
       {/* Heading */}
       <div className="text-center mb-12">
         <GradientText as="h2" className="text-display font-bold">
-          AI Phone Agent
+          AI Voice Agent
         </GradientText>
         <p className="text-text-secondary text-body-lg mt-4">
           Simple pricing, no surprises. Cancel anytime.

@@ -169,7 +169,7 @@ export function Hero() {
                 aria-hidden="true"
               />
 
-              {/* Card 1 - AI Phone Agent */}
+              {/* Card 1 - AI Voice Agent */}
               <div
                 className="absolute animate-float"
                 style={{ top: "8%", right: "5%", transform: "rotate(3deg)" }}
@@ -177,7 +177,7 @@ export function Hero() {
                 <GlassCard
                   icon={Phone}
                   iconColor="#00D4AA"
-                  label="AI Phone Agent"
+                  label="AI Voice Agent"
                   subtext={"24/7 \u00B7 Every call answered"}
                   className="w-[200px] h-[140px]"
                 />

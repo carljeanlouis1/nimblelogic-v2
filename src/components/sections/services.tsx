@@ -1,6 +1,6 @@
 "use client";
 
-import { SERVICES } from "@/lib/constants";
+import { SERVICES, SITE } from "@/lib/constants";
 import { SectionWrapper } from "@/components/layout/section-wrapper";
 import { RevealOnScroll } from "@/components/shared/reveal-on-scroll";
 import { GlassCard } from "@/components/shared/glass-card";
@@ -37,7 +37,7 @@ export function Services() {
         </div>
       </RevealOnScroll>
 
-      {/* AI Phone Agent — Hero Card */}
+      {/* AI Voice Agent — Hero Card */}
       <RevealOnScroll>
         <div className="animated-border">
           <div className="bg-surface rounded-2xl p-8 md:p-12">
@@ -71,7 +71,9 @@ export function Services() {
                   ))}
                 </div>
                 <a
-                  href="#pricing"
+                  href={SITE.bookingUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="btn-gradient px-6 py-3 rounded-lg mt-8 inline-flex items-center gap-2 w-fit"
                 >
                   Get Started

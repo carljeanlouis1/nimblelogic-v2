@@ -35,7 +35,7 @@ export const PAIN_POINTS = [
 
 export const SERVICES = [
   {
-    id: "phone-agent",
+    id: "voice-agent",
     title: "Your 24/7 AI Receptionist",
     description:
       "NimbleLogic AI answers every call — day or night — with a friendly, professional voice that sounds human. It books appointments, answers common questions, and captures every lead so you can focus on the work that matters.",

@@ -12,21 +12,21 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
-  title: "NimbleLogic AI — 24/7 AI Phone Answering & Automation | NYC",
+  title: "NimbleLogic AI — 24/7 AI Voice Agent & Automation | NYC",
   description:
-    "Never miss another service call. AI-powered phone answering that books appointments, captures leads, and sounds human. Live demo: (856) 666-3692. Based in NYC.",
+    "Never miss another service call. AI-powered voice agent that books appointments, captures leads, and sounds human. Live demo: (856) 666-3692. Based in NYC.",
   keywords: [
-    "AI phone answering",
+    "AI voice agent",
     "AI receptionist",
-    "automated phone service",
+    "AI phone answering",
     "AI automation NYC",
     "AI assistant",
     "business automation",
   ],
   openGraph: {
-    title: "NimbleLogic AI — 24/7 AI Phone Answering & Automation | NYC",
+    title: "NimbleLogic AI — 24/7 AI Voice Agent & Automation | NYC",
     description:
-      "Never miss another service call. AI-powered phone answering that books appointments, captures leads, and sounds human. Live demo: (856) 666-3692.",
+      "Never miss another service call. AI-powered voice agent that books appointments, captures leads, and sounds human. Live demo: (856) 666-3692.",
     url: SITE.url,
     siteName: SITE.name,
     locale: "en_US",
@@ -34,9 +34,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "NimbleLogic AI — 24/7 AI Phone Answering & Automation | NYC",
+    title: "NimbleLogic AI — 24/7 AI Voice Agent & Automation | NYC",
     description:
-      "Never miss another service call. AI-powered phone answering that books appointments, captures leads, and sounds human.",
+      "Never miss another service call. AI-powered voice agent that books appointments, captures leads, and sounds human.",
   },
   robots: {
     index: true,
@@ -63,7 +63,7 @@ export default function RootLayout({
               "@type": "LocalBusiness",
               name: SITE.name,
               description:
-                "AI-powered phone answering, personal assistants, and business automation services.",
+                "AI-powered voice agents, personal assistants, and business automation services.",
               url: SITE.url,
               telephone: SITE.phone,
               email: SITE.email,
@@ -75,7 +75,7 @@ export default function RootLayout({
               },
               areaServed: "United States",
               serviceType: [
-                "AI Phone Answering",
+                "AI Voice Agent",
                 "AI Personal Assistant",
                 "AI Business Operations",
               ],

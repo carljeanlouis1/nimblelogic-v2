@@ -3,7 +3,7 @@ import { Linkedin, Twitter, Mail, Phone, MapPin } from "lucide-react";
 import { SITE } from "@/lib/constants";
 
 const services = [
-  { label: "AI Phone Agent", href: "#services" },
+  { label: "AI Voice Agent", href: "#services" },
   { label: "AI Personal Assistant", href: "#services" },
   { label: "AI Business Operations", href: "#services" },
 ];
