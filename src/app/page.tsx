@@ -3,6 +3,7 @@ import { Footer } from "@/components/layout/footer";
 import { Hero } from "@/components/sections/hero";
 import { PainPoints } from "@/components/sections/pain-points";
 import { Services } from "@/components/sections/services";
+import { WhoWeServe } from "@/components/sections/who-we-serve";
 import { Demo } from "@/components/sections/demo";
 import { PricingPhone } from "@/components/sections/pricing-phone";
 import { PricingAssistant } from "@/components/sections/pricing-assistant";
@@ -17,6 +18,7 @@ export default function Home() {
         <Hero />
         <PainPoints />
         <Services />
+        <WhoWeServe />
         <Demo />
         <PricingPhone />
         <PricingAssistant />

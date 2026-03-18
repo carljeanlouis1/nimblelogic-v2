@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { SITE } from "@/lib/constants";
+import { SITE, FAQ_ITEMS } from "@/lib/constants";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -77,7 +77,7 @@ export default function RootLayout({
               "@type": "LocalBusiness",
               name: SITE.name,
               description:
-                "AI-powered voice agents, personal assistants, and business automation services.",
+                "AI-powered voice agents, personal assistants, and business automation services for small businesses. Based in NYC with remote and in-person setup.",
               url: SITE.url,
               telephone: SITE.phone,
               email: SITE.email,
@@ -93,6 +93,81 @@ export default function RootLayout({
                 "AI Personal Assistant",
                 "AI Business Operations",
               ],
+              hasOfferCatalog: {
+                "@type": "OfferCatalog",
+                name: "AI Automation Services",
+                itemListElement: [
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "AI Voice Agent",
+                      description:
+                        "24/7 AI-powered call answering, lead qualification, and appointment booking.",
+                    },
+                    price: "199",
+                    priceCurrency: "USD",
+                    priceSpecification: {
+                      "@type": "UnitPriceSpecification",
+                      price: "199",
+                      priceCurrency: "USD",
+                      unitText: "MONTH",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "AI Personal Assistant",
+                      description:
+                        "Custom AI assistant setup — handles email, scheduling, research, and task management.",
+                    },
+                    price: "349",
+                    priceCurrency: "USD",
+                    priceSpecification: {
+                      "@type": "UnitPriceSpecification",
+                      price: "349",
+                      priceCurrency: "USD",
+                      unitText: "ONE_TIME",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "AI Business Operations",
+                      description:
+                        "End-to-end AI automation for business workflows — from customer intake to invoicing.",
+                    },
+                    price: "699",
+                    priceCurrency: "USD",
+                    priceSpecification: {
+                      "@type": "UnitPriceSpecification",
+                      price: "699",
+                      priceCurrency: "USD",
+                      unitText: "ONE_TIME",
+                    },
+                  },
+                ],
+              },
+              sameAs: [SITE.linkedin, SITE.twitter],
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: FAQ_ITEMS.map((item) => ({
+                "@type": "Question",
+                name: item.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: item.answer,
+                },
+              })),
             }),
           }}
         />

@@ -16,6 +16,7 @@ export const NAV_LINKS = [
   { label: "Demo", href: "#demo" },
   { label: "Pricing", href: "#pricing" },
   { label: "FAQ", href: "#faq" },
+  { label: "Blog", href: "/blog" },
 ] as const;
 
 export const PAIN_POINTS = [
@@ -212,5 +213,20 @@ export const FAQ_ITEMS = [
   {
     question: "What if I want to cancel?",
     answer: "No contracts. Month-to-month. Cancel anytime, no questions asked.",
+  },
+  {
+    question: "Does this work for businesses outside of home services?",
+    answer:
+      "Yes, any business that relies on phone calls. We serve contractors, law firms, dental offices, med spas, real estate agents, and more. The AI is customized for your specific industry and services.",
+  },
+  {
+    question: "Can the AI handle industry-specific questions?",
+    answer:
+      "Absolutely. During setup, we train the AI on your services, pricing ranges, service area, business policies, and common customer questions. A dental office AI knows about cleanings and insurance. A law firm AI knows about practice areas and consultation booking.",
+  },
+  {
+    question: "What happens if the AI can't answer a question?",
+    answer:
+      "The AI recognizes when it's out of its depth, lets the caller know someone will get back to them shortly, sends you an immediate notification with the full conversation summary, and logs everything for follow-up.",
   },
 ] as const;
