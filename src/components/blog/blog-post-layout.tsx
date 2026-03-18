@@ -57,8 +57,37 @@ export function BlogPostLayout({ post }: { post: BlogPost }) {
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
 
+        {/* Author Bio */}
+        <div className="border-t border-white/10 pt-8 mt-12">
+          <div className="bg-[#111827]/60 rounded-xl p-6">
+            <div className="flex items-start gap-4 md:gap-5">
+              <img
+                src="/carl-headshot.jpg"
+                alt="Carl Jean-Louis, Founder of NimbleLogic AI"
+                className="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover flex-shrink-0"
+              />
+              <div>
+                <p className="font-bold text-[#F9FAFB]">Carl Jean-Louis</p>
+                <p className="text-sm text-[#00D4AA] mb-2">
+                  Founder, NimbleLogic AI
+                </p>
+                <p className="text-sm text-[#9CA3AF] leading-relaxed">
+                  Carl Jean-Louis is the founder of NimbleLogic AI, where he
+                  helps small businesses automate their operations with AI phone
+                  agents, personal assistants, and workflow automation. With a
+                  background in industrial engineering from Penn State, an AI/ML
+                  certification from Columbia, and experience modernizing
+                  enterprise systems at UPS, Carl brings a practical, hands-on
+                  approach to AI implementation. Based in Brooklyn, NimbleLogic
+                  offers both remote and in-person setup in the NYC metro area.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* CTA */}
-        <div className="mt-16 text-center border-t border-white/5 pt-12">
+        <div className="mt-12 text-center border-t border-white/5 pt-12">
           <p className="text-lg text-[#9CA3AF] mb-6">
             Ready to stop missing calls and start capturing every lead?
           </p>
@@ -79,12 +108,6 @@ export function BlogPostLayout({ post }: { post: BlogPost }) {
           >
             Book a Discovery Call
           </a>
-          <div className="mt-8 pt-8 border-t border-white/5">
-            <p className="text-sm text-[#6B7280] italic">
-              Written by NimbleLogic AI — we help small businesses capture every
-              call with custom AI phone agents. Based in NYC.
-            </p>
-          </div>
         </div>
       </article>
 
@@ -101,9 +124,14 @@ export function BlogPostLayout({ post }: { post: BlogPost }) {
             datePublished: post.datePublished,
             dateModified: post.datePublished,
             author: {
-              "@type": "Organization",
-              name: "NimbleLogic AI",
-              url: "https://nimblelogicai.com",
+              "@type": "Person",
+              name: "Carl Jean-Louis",
+              jobTitle: "Founder",
+              worksFor: {
+                "@type": "Organization",
+                name: "NimbleLogic AI",
+                url: "https://nimblelogicai.com",
+              },
             },
             publisher: {
               "@type": "Organization",
