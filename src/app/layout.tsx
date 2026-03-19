@@ -40,6 +40,7 @@ export const metadata: Metadata = {
     title: "NimbleLogic AI | AI Automation for Your Business",
     description:
       "AI phone agents, personal assistants, and business operations — built in NYC, backed by real humans. From 24/7 call answering to multi-agent AI teams. No contracts, live in 48 hours.",
+    images: ["https://nimblelogicai.com/og-image.png"],
   },
   robots: {
     index: true,
