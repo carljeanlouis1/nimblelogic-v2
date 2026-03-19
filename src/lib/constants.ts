@@ -147,6 +147,20 @@ export const PRICING_ASSISTANT = [
     ],
   },
   {
+    name: "AI Team Setup — Remote",
+    price: 599,
+    period: "one-time",
+    description: "Multi-agent AI team with specialized roles",
+    features: [
+      "Everything in Remote Setup",
+      "Multiple coordinated AI agents",
+      "Specialized roles (content, operations, research, security)",
+      "Inter-agent communication & workflows",
+      "2 hour training session",
+      "14-day support window",
+    ],
+  },
+  {
     name: "In-Person NYC",
     price: 699,
     period: "one-time",
@@ -159,12 +173,27 @@ export const PRICING_ASSISTANT = [
       "30-day support window",
     ],
   },
+  {
+    name: "AI Team Setup — NYC",
+    price: 949,
+    period: "one-time",
+    description: "White-glove multi-agent team installation",
+    features: [
+      "Everything in In-Person Setup",
+      "Multiple coordinated AI agents",
+      "Specialized roles & workflows",
+      "Custom inter-agent automations",
+      "Extended 3-hour training",
+      "30-day support window",
+    ],
+  },
 ] as const;
 
 export const PRICING_MAINTENANCE = {
-  range: "$49–149",
+  range: "$49–199",
   period: "/month",
   description: "Optional ongoing maintenance and updates",
+  note: "Multi-agent teams: $99–199/month",
 } as const;
 
 export const HOW_IT_WORKS = [

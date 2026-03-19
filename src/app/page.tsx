@@ -7,6 +7,7 @@ import { WhoWeServe } from "@/components/sections/who-we-serve";
 import { Demo } from "@/components/sections/demo";
 import { PricingPhone } from "@/components/sections/pricing-phone";
 import { PricingAssistant } from "@/components/sections/pricing-assistant";
+import { PricingOperations } from "@/components/sections/pricing-operations";
 import { HowItWorks } from "@/components/sections/how-it-works";
 import { FAQ } from "@/components/sections/faq";
 
@@ -22,6 +23,7 @@ export default function Home() {
         <Demo />
         <PricingPhone />
         <PricingAssistant />
+        <PricingOperations />
         <HowItWorks />
         <FAQ />
       </main>

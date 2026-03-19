@@ -87,57 +87,66 @@ export function Services() {
 
       {/* AI Personal Assistant + AI Business Ops */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
-        {secondaryCards.map(({ service, icon: Icon }, index) => (
-          <RevealOnScroll key={service.id} delay={0.1 * (index + 1)}>
-            <GlassCard hover glow="primary" className="h-full flex flex-col">
-              {/* Icon */}
-              <div className="rounded-lg bg-secondary/10 p-3 w-fit">
-                <Icon className="w-6 h-6 text-secondary" />
-              </div>
+        {secondaryCards.map(({ service, icon: Icon }, index) => {
+          const linkHref =
+            service.id === "personal-assistant"
+              ? "/#pricing-assistant"
+              : service.id === "business-ops"
+                ? "/#pricing-operations"
+                : "/#pricing";
 
-              {/* Title */}
-              <h3 className="text-xl font-semibold text-text-primary mt-4">
-                {service.title}
-              </h3>
+          return (
+            <RevealOnScroll key={service.id} delay={0.1 * (index + 1)}>
+              <GlassCard hover glow="primary" className="h-full flex flex-col">
+                {/* Icon */}
+                <div className="rounded-lg bg-secondary/10 p-3 w-fit">
+                  <Icon className="w-6 h-6 text-secondary" />
+                </div>
 
-              {/* Description */}
-              <p className="text-text-secondary mt-2">{service.description}</p>
+                {/* Title */}
+                <h3 className="text-xl font-semibold text-text-primary mt-4">
+                  {service.title}
+                </h3>
 
-              {/* Features */}
-              <div className="mt-4 space-y-2.5">
-                {service.features.map((feature, featureIndex) => (
-                  <div
-                    key={featureIndex}
-                    className="flex items-start gap-3"
+                {/* Description */}
+                <p className="text-text-secondary mt-2">{service.description}</p>
+
+                {/* Features */}
+                <div className="mt-4 space-y-2.5">
+                  {service.features.map((feature, featureIndex) => (
+                    <div
+                      key={featureIndex}
+                      className="flex items-start gap-3"
+                    >
+                      <Check className="text-primary w-4 h-4 mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-text-secondary">
+                        {feature}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Setup note */}
+                {"setupNote" in service && service.setupNote && (
+                  <p className="text-sm text-text-muted italic mt-4">
+                    {service.setupNote}
+                  </p>
+                )}
+
+                {/* Learn More link — pushed to bottom */}
+                <div className="mt-auto pt-6">
+                  <a
+                    href={linkHref}
+                    className="text-primary text-sm font-medium inline-flex items-center gap-1 hover:gap-2 transition-all"
                   >
-                    <Check className="text-primary w-4 h-4 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-text-secondary">
-                      {feature}
-                    </span>
-                  </div>
-                ))}
-              </div>
-
-              {/* Setup note */}
-              {"setupNote" in service && service.setupNote && (
-                <p className="text-sm text-text-muted italic mt-4">
-                  {service.setupNote}
-                </p>
-              )}
-
-              {/* Learn More link — pushed to bottom */}
-              <div className="mt-auto pt-6">
-                <a
-                  href="#pricing"
-                  className="text-primary text-sm font-medium inline-flex items-center gap-1 hover:gap-2 transition-all"
-                >
-                  Learn More
-                  <ArrowRight className="w-4 h-4" />
-                </a>
-              </div>
-            </GlassCard>
-          </RevealOnScroll>
-        ))}
+                    Learn More
+                    <ArrowRight className="w-4 h-4" />
+                  </a>
+                </div>
+              </GlassCard>
+            </RevealOnScroll>
+          );
+        })}
       </div>
     </SectionWrapper>
   );

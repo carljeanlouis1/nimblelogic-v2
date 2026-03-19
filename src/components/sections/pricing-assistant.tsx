@@ -9,7 +9,7 @@ import { GlassCard } from "@/components/shared/glass-card";
 
 export function PricingAssistant() {
   return (
-    <SectionWrapper>
+    <SectionWrapper id="pricing-assistant">
       {/* Heading */}
       <div className="text-center mb-12">
         <h2 className="text-heading font-bold text-text-primary">
@@ -21,13 +21,23 @@ export function PricingAssistant() {
       </div>
 
       {/* Cards grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
         {PRICING_ASSISTANT.map((tier, i) => {
-          const isInPerson = tier.name === "In-Person NYC";
+          const isTeamTier = tier.name.includes("AI Team");
+          const isNYC = tier.name.includes("NYC");
 
           return (
             <RevealOnScroll key={tier.name} delay={i * 0.1}>
               <GlassCard hover className="h-full flex flex-col">
+                {/* Team badge */}
+                {isTeamTier && (
+                  <div className="mb-3">
+                    <span className="bg-secondary/10 border border-secondary/20 text-secondary text-xs font-medium px-2.5 py-1 rounded-full">
+                      Multi-Agent
+                    </span>
+                  </div>
+                )}
+
                 {/* Name */}
                 <h3 className="text-lg font-semibold text-text-primary">
                   {tier.name}
@@ -53,7 +63,12 @@ export function PricingAssistant() {
                 <ul className="space-y-3 flex-1">
                   {tier.features.map((feature) => (
                     <li key={feature} className="flex items-center gap-3">
-                      <Check className="w-4 h-4 shrink-0 text-text-muted" />
+                      <Check
+                        className={cn(
+                          "w-4 h-4 shrink-0",
+                          isTeamTier ? "text-secondary" : "text-text-muted"
+                        )}
+                      />
                       <span className="text-sm text-text-secondary">
                         {feature}
                       </span>
@@ -68,7 +83,7 @@ export function PricingAssistant() {
                   rel="noopener noreferrer"
                   className={cn(
                     "w-full py-3 rounded-lg text-center mt-8 block font-semibold",
-                    isInPerson ? "btn-gradient" : "btn-ghost"
+                    isTeamTier || isNYC ? "btn-gradient" : "btn-ghost"
                   )}
                 >
                   Get Started
@@ -81,7 +96,7 @@ export function PricingAssistant() {
 
       {/* Maintenance Banner */}
       <RevealOnScroll delay={0.2}>
-        <div className="mt-8 max-w-3xl mx-auto">
+        <div className="mt-8 max-w-5xl mx-auto">
           <GlassCard hover={false} className="text-center">
             <h3 className="text-lg font-semibold text-text-primary">
               Optional Maintenance
@@ -91,6 +106,9 @@ export function PricingAssistant() {
             </p>
             <p className="text-sm text-text-muted mt-2">
               {PRICING_MAINTENANCE.description}
+            </p>
+            <p className="text-sm text-text-muted mt-1">
+              {PRICING_MAINTENANCE.note}
             </p>
           </GlassCard>
         </div>
