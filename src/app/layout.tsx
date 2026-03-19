@@ -12,9 +12,9 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
-  title: "NimbleLogic AI — 24/7 AI Voice Agent & Automation | NYC",
+  title: "NimbleLogic AI | AI Automation for Your Business",
   description:
-    "Never miss another service call. AI-powered voice agent that books appointments, captures leads, and sounds human. Live demo: (856) 666-3692. Based in NYC.",
+    "AI phone agents, personal assistants, and business operations — built in NYC, backed by real humans. From 24/7 call answering to multi-agent AI teams. No contracts, live in 48 hours.",
   keywords: [
     "AI voice agent",
     "AI receptionist",
@@ -22,21 +22,24 @@ export const metadata: Metadata = {
     "AI automation NYC",
     "AI assistant",
     "business automation",
+    "AI personal assistant",
+    "multi-agent AI",
   ],
   openGraph: {
-    title: "NimbleLogic AI — 24/7 AI Voice Agent & Automation | NYC",
+    title: "NimbleLogic AI | AI Automation for Your Business",
     description:
-      "Never miss another service call. AI-powered voice agent that books appointments, captures leads, and sounds human. Live demo: (856) 666-3692.",
+      "AI phone agents, personal assistants, and business operations — built in NYC, backed by real humans. From 24/7 call answering to multi-agent AI teams. No contracts, live in 48 hours.",
     url: SITE.url,
     siteName: SITE.name,
+    images: [{ url: "https://nimblelogicai.com/og-image.png" }],
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "NimbleLogic AI — 24/7 AI Voice Agent & Automation | NYC",
+    title: "NimbleLogic AI | AI Automation for Your Business",
     description:
-      "Never miss another service call. AI-powered voice agent that books appointments, captures leads, and sounds human.",
+      "AI phone agents, personal assistants, and business operations — built in NYC, backed by real humans. From 24/7 call answering to multi-agent AI teams. No contracts, live in 48 hours.",
   },
   robots: {
     index: true,
