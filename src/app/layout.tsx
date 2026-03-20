@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { SITE, FAQ_ITEMS } from "@/lib/constants";
+import { GA4Events } from "@/components/analytics/ga4-events";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -177,6 +178,7 @@ export default function RootLayout({
         />
       </head>
       <body className="noise-overlay">
+        <GA4Events />
         {children}
       </body>
     </html>
