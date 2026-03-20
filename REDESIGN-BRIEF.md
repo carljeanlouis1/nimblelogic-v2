@@ -72,8 +72,8 @@ Use BOTH Magic MCP and Google Stitch MCP to produce something that looks like a 
 ```bash
 cd ~/Projects/nimblelogic-v3
 npm run build
-CLOUDFLARE_API_TOKEN=DtxyZ5YPaqEqTFNCX0ZU4sktmdMu17AT5pk1n9Yu \
-CLOUDFLARE_ACCOUNT_ID=a5a38762d1d72c405fe39231e0b1632f \
+CLOUDFLARE_API_TOKEN=$CLOUDFLARE_API_TOKEN \
+CLOUDFLARE_ACCOUNT_ID=$CLOUDFLARE_ACCOUNT_ID \
 npx wrangler pages deploy out --project-name nimblelogic-v3 --branch main --commit-dirty=true
 ```
 Note: You may need to create the nimblelogic-v3 Pages project first if it doesn't exist.

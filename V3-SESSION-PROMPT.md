@@ -46,8 +46,8 @@ CRITICAL: All text, pricing, FAQ answers, blog content, CTAs, phone numbers must
 4. `npm run build` — zero errors
 5. Deploy:
 ```
-CLOUDFLARE_API_TOKEN=DtxyZ5YPaqEqTFNCX0ZU4sktmdMu17AT5pk1n9Yu \
-CLOUDFLARE_ACCOUNT_ID=a5a38762d1d72c405fe39231e0b1632f \
+CLOUDFLARE_API_TOKEN=$CLOUDFLARE_API_TOKEN \
+CLOUDFLARE_ACCOUNT_ID=$CLOUDFLARE_ACCOUNT_ID \
 npx wrangler pages deploy out --project-name nimblelogic-v3 --branch main --commit-dirty=true
 ```
 6. Give me the preview URL so I can compare v2 and v3 side by side.
