@@ -45,10 +45,10 @@ export const SERVICES = [
       "Books appointments directly into your calendar",
       "Sounds natural, not robotic",
       "Captures every lead — name, number, job details sent to you instantly",
-      "Works with Google Calendar, Housecall Pro, Jobber, ServiceTitan",
+      "Works with Google Calendar, Housecall Pro, Clio, Dentrix, Follow Up Boss & more",
       "No contracts, cancel anytime",
     ],
-    audience: "Plumbers, HVAC techs, electricians, roofers, home service contractors",
+    audience: "Contractors, law firms, dental offices, real estate agents, insurance agencies & more",
     hero: true,
   },
   {

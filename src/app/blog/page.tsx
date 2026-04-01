@@ -6,11 +6,11 @@ import { blogPosts } from "@/lib/blog-data";
 export const metadata: Metadata = {
   title: `Blog | ${SITE.name}`,
   description:
-    "Insights on AI automation for small businesses. Learn how AI phone agents, receptionists, and automation tools help contractors and service businesses grow.",
+    "Insights on AI automation for small businesses. Learn how AI phone agents, receptionists, and automation tools help contractors, law firms, dental offices, and service businesses grow.",
   openGraph: {
     title: `Blog | ${SITE.name}`,
     description:
-      "Insights on AI automation for small businesses. Learn how AI phone agents, receptionists, and automation tools help contractors and service businesses grow.",
+      "Insights on AI automation for small businesses. Learn how AI phone agents, receptionists, and automation tools help contractors, law firms, dental offices, and service businesses grow.",
     url: `${SITE.url}/blog`,
     siteName: SITE.name,
     locale: "en_US",
